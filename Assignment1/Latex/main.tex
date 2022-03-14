@@ -1,0 +1,60 @@
+\documentclass[conference]{IEEEtran}
+
+% Swedish language package 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% Graphics
+\usepackage{graphicx, float, subfigure, blindtext}
+
+\newcommand\IEEEhyperrefsetup{
+bookmarks=true,bookmarksnumbered=true,%
+colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black}%
+}
+
+% Preferred hyperref setup, Michael Shell
+\usepackage[\IEEEhyperrefsetup, pdftex]{hyperref}
+
+% Maths
+\usepackage{mathtools}
+
+% These packages must be at the end
+\usepackage[nolist,nohyperlinks]{acronym}
+\usepackage{cleveref}
+\graphicspath{{images/}}
+
+% Remove section first paragraph indent
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{*1}{*1}
+\titlespacing*{\subsection}{0pt}{*1}{*1}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+\titleformat{\subsubsection}[runin]{\itshape}{\thesubsubsection)}{1em}{}[:]
+\titlespacing*{\subsubsection}{\parindent}{0pt}{*1}
+
+% Include authors 
+\author{\IEEEauthorblockN{}
+\IEEEauthorblockA{
+Kai-Po Lin\\
+Email: kl72@rice.edu
+}}
+
+% The report title.
+\title{The 3D-sensing technologies of Autonomous Navigation and Metaverse}
+% Document begins here
+\begin{document}
+% Create the title.
+\maketitle
+% Example sections, name them
+% according to specific needs.
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/techniques}
+\input{sections/challenges}
+\input{sections/future}
+\input{sections/conclusion}
+% Select the IEEEtran style
+\bibliographystyle{IEEEtran}
+% Include bibliography file
+\bibliography{IEEEabrv,refs}
+\end{document}
