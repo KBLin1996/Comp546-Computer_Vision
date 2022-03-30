@@ -1,6 +1,17 @@
+# Some videos
+*/*.mov
+
+# Pre-trained Models
+Assignment7/pose/
+
+# Word files
+*.docx
 */*.docx
+
+# Mac hidden files
 .DS_Store
 */.DS_Store
+*/*/.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
